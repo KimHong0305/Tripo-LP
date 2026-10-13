@@ -36,6 +36,11 @@ const nextConfig: NextConfig = {
     ],
   },
   webpack: (webpackConfig) => {
+    webpackConfig.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack'],
+    })
     webpackConfig.resolve.extensionAlias = {
       '.cjs': ['.cts', '.cjs'],
       '.js': ['.ts', '.tsx', '.js', '.jsx'],
@@ -48,6 +53,12 @@ const nextConfig: NextConfig = {
   redirects,
   turbopack: {
     root: path.resolve(dirname),
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
   },
 }
 

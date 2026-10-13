@@ -1,3 +1,5 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 declare global {
   namespace NodeJS {
     interface ProcessEnv {

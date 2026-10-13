@@ -1,0 +1,67 @@
+.calendar {
+  --rdp-accent-color: #0057ff;
+  --rdp-accent-background-color: #e8f0ff;
+  --rdp-day_button-border-radius: 8px;
+  --rdp-day_button-width: 40px;
+  --rdp-day_button-height: 40px;
+  --rdp-nav_button-width: 32px;
+  --rdp-nav_button-height: 32px;
+  --rdp-today-color: #0057ff;
+
+  font-family: inherit;
+}
+
+.calendar :global(.rdp-month) {
+  border: 1px solid #f1f2f3;
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.calendar :global(.rdp-chevron) {
+  fill: #121316;
+}
+
+/* Tiêu đề tháng */
+.calendar :global(.rdp-caption_label) {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Tên các ngày trong tuần */
+.calendar :global(.rdp-weekday) {
+  color: #858b98;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Nút ngày */
+.calendar :global(.rdp-day_button) {
+  border: none;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+/* Hover */
+.calendar :global(.rdp-day_button:hover) {
+  background-color: #e8f0ff;
+  color: #0057ff;
+}
+
+/* Ngày được chọn */
+.calendar :global(.rdp-selected .rdp-day_button) {
+  background-color: #0057ff;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Ngày hiện tại */
+.calendar :global(.rdp-today:not(.rdp-selected) .rdp-day_button) {
+  color: #0057ff;
+  font-weight: 700;
+}
+
+/* Ngày không thuộc tháng hiện tại */
+.calendar :global(.rdp-outside) {
+  color: #b8bdc7;
+}
