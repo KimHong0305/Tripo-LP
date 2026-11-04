@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@lightgallery/react':
+        specifier: ^3.0.0
+        version: 3.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
       '@payloadcms/admin-bar':
         specifier: 3.90.2
         version: 3.90.2(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -71,6 +74,9 @@ importers:
       graphql:
         specifier: ^16.8.2
         version: 16.14.2
+      lightgallery:
+        specifier: ^3.0.0
+        version: 3.0.0
       lucide-react:
         specifier: 0.563.0
         version: 0.563.0(react@19.2.6)
@@ -110,7 +116,7 @@ importers:
     devDependencies:
       '@chromatic-com/storybook':
         specifier: latest
-        version: 5.4.0(storybook@10.6.1(@types/react@19.2.14)(prettier@3.9.9)(react@19.2.6))
+        version: 5.5.1(storybook@10.6.1(@types/react@19.2.14)(prettier@3.9.9)(react@19.2.6))
       '@eslint/eslintrc':
         specifier: ^3.2.0
         version: 3.3.7(supports-color@7.2.0)
@@ -822,8 +828,8 @@ packages:
   '@borewit/text-codec@0.2.2':
     resolution: {integrity: sha512-DDaRehssg1aNrH4+2hnj1B7vnUGEjU6OIlyRdkMd0aUdIUvKXrJfXsy8LVtXAy7DRvYVluWbMspsRhz2lcW0mQ==}
 
-  '@chromatic-com/storybook@5.4.0':
-    resolution: {integrity: sha512-U4Rny8H6BBa8uiRMnL0CFZyqZ0MWogN/szlMugsInfSnX+PtrLCVp2kjrvaG9bv6X5xSgHpnmepOzLm8+QFseA==}
+  '@chromatic-com/storybook@5.5.1':
+    resolution: {integrity: sha512-DOtUEBIJHmqsOWg+Hi1t5m5FTNlyzL0NpZUwQob+ex30nDvL4p+MrYctmvEqH/QT72mf9mLXbz3Uj8aoWD2OYA==}
     engines: {node: '>=20.0.0', yarn: '>=1.22.18'}
     peerDependencies:
       storybook: ^0.0.0-0 || ^10.1.0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0 || ^10.4.0-0 || ^10.5.0-0 || ^10.6.0-0 || ^11.0.0-0
@@ -1626,6 +1632,17 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  '@lightgallery/headless@3.0.0':
+    resolution: {integrity: sha512-6lip9x+jmsC4ou52T99/qcXiTWVnrMYZIy8BmsEDJaauViPr2RENTChgxiYP6UXWOVebyxUjC4JyTmKMZX13+Q==}
+    engines: {node: '>=18'}
+
+  '@lightgallery/react@3.0.0':
+    resolution: {integrity: sha512-xfdYMZyY96Jd/+LtV6ki3b2a9aYVCAh3KjHIFXmHv2Ha9aw9ZZaMWebYfurFc5HLrfm2olJC0H1CPKuFqRc8pg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
 
   '@mdx-js/react@3.1.1':
     resolution: {integrity: sha512-f++rKLQgUVYDAtECQ6fn/is15GkEH9+nZPM3MS0RcxVqoTfawHvDlSCH7JbMhAM6uJ32v3eXLvLmLvjGu7PTQw==}
@@ -4706,6 +4723,10 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
+  lightgallery@3.0.0:
+    resolution: {integrity: sha512-UBzeo4rO1qeyG/hFRth5fzNebAnkpn5mfYzHUV3QAkOVh5mql6uK5QCq5M5wwmtdwuCeFDYsbctErxAKCkFUsQ==}
+    engines: {node: '>=18'}
+
   lightningcss-android-arm64@1.32.0:
     resolution: {integrity: sha512-YK7/ClTt4kAK0vo6w3X+Pnm0D2cf2vPHbhOXdoNti1Ga0al1P4TBZhwjATvjNwLEBCnKvjJc2jQgHXH0NEwlAg==}
     engines: {node: '>= 12.0.0'}
@@ -7257,7 +7278,7 @@ snapshots:
 
   '@borewit/text-codec@0.2.2': {}
 
-  '@chromatic-com/storybook@5.4.0(storybook@10.6.1(@types/react@19.2.14)(prettier@3.9.9)(react@19.2.6))':
+  '@chromatic-com/storybook@5.5.1(storybook@10.6.1(@types/react@19.2.14)(prettier@3.9.9)(react@19.2.6))':
     dependencies:
       '@neoconfetti/react': 1.0.0
       chromatic: 18.10.2
@@ -8010,6 +8031,14 @@ snapshots:
       yjs: 13.6.33
     optionalDependencies:
       typescript: 5.7.3
+
+  '@lightgallery/headless@3.0.0': {}
+
+  '@lightgallery/react@3.0.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)':
+    dependencies:
+      '@lightgallery/headless': 3.0.0
+      react: 19.2.6
+      react-dom: 19.2.6(react@19.2.6)
 
   '@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.6)':
     dependencies:
@@ -11157,6 +11186,8 @@ snapshots:
   lib0@0.2.119:
     dependencies:
       isomorphic.js: 0.2.5
+
+  lightgallery@3.0.0: {}
 
   lightningcss-android-arm64@1.32.0:
     optional: true

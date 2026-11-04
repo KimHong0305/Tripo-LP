@@ -19,3 +19,11 @@ export const ratingMapping: { label: string; value: number; color: string }[] = 
   { label: 'Poor', value: 2, color: 'text-orange-600' },
   { label: 'Terrible', value: 1, color: 'text-red-600' },
 ]
+
+export const detailNavItems: { label: string; href: string }[] = [
+  { label: 'Overview', href: '#overview' },
+  { label: 'Amenities', href: '#amenities' },
+  { label: 'Location', href: '#location' },
+  { label: 'Calendar', href: '#calendar' },
+  { label: 'Reviews', href: '#reviews' },
+]

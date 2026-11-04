@@ -13,16 +13,18 @@ import 'swiper/css/pagination'
 type Props = {
   images: StaticImageData[]
   className?: string
+  dotColor?: string
+  isPagination?: boolean
 }
 
-const ImageSlider: FC<Props> = ({ images, className }) => {
+const ImageSlider: FC<Props> = ({ images, className, dotColor, isPagination }) => {
   return (
     <Swiper
       className={cn('h-45 w-70', className)}
       modules={[Navigation, Pagination]}
-      pagination={{ clickable: true }}
+      pagination={isPagination ? { clickable: true } : false}
       slidesPerView={1}
-      style={{ '--swiper-pagination-color': '#ffffff' } as CSSProperties}
+      style={{ '--swiper-pagination-color': dotColor || '#ffffff' } as CSSProperties}
     >
       {images.map((image, index) => (
         <SwiperSlide key={index} className="h-45 w-70">
